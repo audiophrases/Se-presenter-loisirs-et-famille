@@ -1,0 +1,2315 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Se présenter, loisirs et famille</title>
+    <style>
+      /* Styles */
+      .title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .title-l2 {
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .title-l1 {
+        font-size: 18px;
+        color: gray;
+      }
+      .l2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      .l1 {
+        font-size: 18px;
+        color: gray;
+        margin-bottom: 15px;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .audio-section {
+        margin-bottom: 30px;
+        /* Removed text-align: center to align left */
+        text-align: left;
+      }
+      .audio-player {
+        /* Changed to block and set width appropriately */
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        margin-top: 5px;
+      }
+      .controls {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+      }
+      .controls button,
+      .controls select {
+        background-color: #f0f0f0;
+        border: none;
+        margin-right: 5px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .controls button:hover,
+      .controls select:hover {
+        background-color: #e0e0e0;
+      }
+      .progress {
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+      }
+      .progress input[type="range"] {
+        flex-grow: 1;
+      }
+      .time {
+        font-size: 14px;
+        margin-left: 10px;
+        width: 70px;
+        text-align: right;
+      }
+      .audio-container {
+        /* For debugging, keep it visible */
+        /* display: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Title Rows -->
+    <div class="title">
+      <div class="title-l2">Se présenter, loisirs et famille</div>
+      <div class="title-l1">Presentar-se, aficions i família</div>
+    </div>
+
+    <!-- Content Sections -->
+<div class="l2">Pour découvrir l’âge</div>
+<div class="l1">Per descobrir l’edat</div>
+
+    <div class="audio-section" id="audio1_container">
+      <div class="audio-player">
+        <audio id="audio1" src="sepresenter-00.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio1')">« 5s</button>
+          <button onclick="playPause('audio1')" id="playPauseBtn_audio1">Play</button>
+          <button onclick="skip('audio1')">5s »</button>
+          <select onchange="changeSpeed('audio1', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio1" value="0" step="0.1" min="0" max="100" onchange="seek('audio1', this.value)">
+          <div class="time" id="time_audio1">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Quel âge as-tu ?</div>
+<div class="l1">Quants anys tens?</div>
+
+    <div class="audio-section" id="audio2_container">
+      <div class="audio-player">
+        <audio id="audio2" src="sepresenter-01.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio2')">« 5s</button>
+          <button onclick="playPause('audio2')" id="playPauseBtn_audio2">Play</button>
+          <button onclick="skip('audio2')">5s »</button>
+          <select onchange="changeSpeed('audio2', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio2" value="0" step="0.1" min="0" max="100" onchange="seek('audio2', this.value)">
+          <div class="time" id="time_audio2">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’ai 12 ans."</div>
+<div class="l1">"Tinc 12 anys."</div>
+
+    <div class="audio-section" id="audio3_container">
+      <div class="audio-player">
+        <audio id="audio3" src="sepresenter-02.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio3')">« 5s</button>
+          <button onclick="playPause('audio3')" id="playPauseBtn_audio3">Play</button>
+          <button onclick="skip('audio3')">5s »</button>
+          <select onchange="changeSpeed('audio3', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio3" value="0" step="0.1" min="0" max="100" onchange="seek('audio3', this.value)">
+          <div class="time" id="time_audio3">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je vais avoir 13 ans le mois prochain."</div>
+<div class="l1">"Faré 13 anys el mes que ve."</div>
+
+    <div class="audio-section" id="audio4_container">
+      <div class="audio-player">
+        <audio id="audio4" src="sepresenter-03.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio4')">« 5s</button>
+          <button onclick="playPause('audio4')" id="playPauseBtn_audio4">Play</button>
+          <button onclick="skip('audio4')">5s »</button>
+          <select onchange="changeSpeed('audio4', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio4" value="0" step="0.1" min="0" max="100" onchange="seek('audio4', this.value)">
+          <div class="time" id="time_audio4">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’ai 11 ans et demi."</div>
+<div class="l1">"Tinc 11 anys i mig."</div>
+
+    <div class="audio-section" id="audio5_container">
+      <div class="audio-player">
+        <audio id="audio5" src="sepresenter-04.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio5')">« 5s</button>
+          <button onclick="playPause('audio5')" id="playPauseBtn_audio5">Play</button>
+          <button onclick="skip('audio5')">5s »</button>
+          <select onchange="changeSpeed('audio5', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio5" value="0" step="0.1" min="0" max="100" onchange="seek('audio5', this.value)">
+          <div class="time" id="time_audio5">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Tu as quel âge ?</div>
+<div class="l1">Quina edat tens?</div>
+
+    <div class="audio-section" id="audio6_container">
+      <div class="audio-player">
+        <audio id="audio6" src="sepresenter-05.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio6')">« 5s</button>
+          <button onclick="playPause('audio6')" id="playPauseBtn_audio6">Play</button>
+          <button onclick="skip('audio6')">5s »</button>
+          <select onchange="changeSpeed('audio6', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio6" value="0" step="0.1" min="0" max="100" onchange="seek('audio6', this.value)">
+          <div class="time" id="time_audio6">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"14 ans."</div>
+<div class="l1">"14 anys."</div>
+
+    <div class="audio-section" id="audio7_container">
+      <div class="audio-player">
+        <audio id="audio7" src="sepresenter-06.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio7')">« 5s</button>
+          <button onclick="playPause('audio7')" id="playPauseBtn_audio7">Play</button>
+          <button onclick="skip('audio7')">5s »</button>
+          <select onchange="changeSpeed('audio7', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio7" value="0" step="0.1" min="0" max="100" onchange="seek('audio7', this.value)">
+          <div class="time" id="time_audio7">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je suis en 6e, j’ai donc 12 ans."</div>
+<div class="l1">"Estic a 6è, per tant tinc 12 anys."</div>
+
+    <div class="audio-section" id="audio8_container">
+      <div class="audio-player">
+        <audio id="audio8" src="sepresenter-07.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio8')">« 5s</button>
+          <button onclick="playPause('audio8')" id="playPauseBtn_audio8">Play</button>
+          <button onclick="skip('audio8')">5s »</button>
+          <select onchange="changeSpeed('audio8', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio8" value="0" step="0.1" min="0" max="100" onchange="seek('audio8', this.value)">
+          <div class="time" id="time_audio8">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’ai 13 ans."</div>
+<div class="l1">"Tinc 13 anys."</div>
+
+    <div class="audio-section" id="audio9_container">
+      <div class="audio-player">
+        <audio id="audio9" src="sepresenter-08.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio9')">« 5s</button>
+          <button onclick="playPause('audio9')" id="playPauseBtn_audio9">Play</button>
+          <button onclick="skip('audio9')">5s »</button>
+          <select onchange="changeSpeed('audio9', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio9" value="0" step="0.1" min="0" max="100" onchange="seek('audio9', this.value)">
+          <div class="time" id="time_audio9">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Pour découvrir les hobbies</div>
+<div class="l1">Per descobrir les aficions</div>
+
+    <div class="audio-section" id="audio10_container">
+      <div class="audio-player">
+        <audio id="audio10" src="sepresenter-09.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio10')">« 5s</button>
+          <button onclick="playPause('audio10')" id="playPauseBtn_audio10">Play</button>
+          <button onclick="skip('audio10')">5s »</button>
+          <select onchange="changeSpeed('audio10', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio10" value="0" step="0.1" min="0" max="100" onchange="seek('audio10', this.value)">
+          <div class="time" id="time_audio10">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Quels sont tes hobbies ?</div>
+<div class="l1">Quines són les teves aficions?</div>
+
+    <div class="audio-section" id="audio11_container">
+      <div class="audio-player">
+        <audio id="audio11" src="sepresenter-10.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio11')">« 5s</button>
+          <button onclick="playPause('audio11')" id="playPauseBtn_audio11">Play</button>
+          <button onclick="skip('audio11')">5s »</button>
+          <select onchange="changeSpeed('audio11', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio11" value="0" step="0.1" min="0" max="100" onchange="seek('audio11', this.value)">
+          <div class="time" id="time_audio11">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’aime jouer au foot et regarder des séries."</div>
+<div class="l1">"M’agrada jugar a futbol i mirar sèries."</div>
+
+    <div class="audio-section" id="audio12_container">
+      <div class="audio-player">
+        <audio id="audio12" src="sepresenter-11.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio12')">« 5s</button>
+          <button onclick="playPause('audio12')" id="playPauseBtn_audio12">Play</button>
+          <button onclick="skip('audio12')">5s »</button>
+          <select onchange="changeSpeed('audio12', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio12" value="0" step="0.1" min="0" max="100" onchange="seek('audio12', this.value)">
+          <div class="time" id="time_audio12">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’adore peindre et faire du vélo."</div>
+<div class="l1">"M’encanta pintar i anar amb bicicleta."</div>
+
+    <div class="audio-section" id="audio13_container">
+      <div class="audio-player">
+        <audio id="audio13" src="sepresenter-12.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio13')">« 5s</button>
+          <button onclick="playPause('audio13')" id="playPauseBtn_audio13">Play</button>
+          <button onclick="skip('audio13')">5s »</button>
+          <select onchange="changeSpeed('audio13', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio13" value="0" step="0.1" min="0" max="100" onchange="seek('audio13', this.value)">
+          <div class="time" id="time_audio13">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je passe beaucoup de temps à dessiner."</div>
+<div class="l1">"Passo molt de temps dibuixant."</div>
+
+    <div class="audio-section" id="audio14_container">
+      <div class="audio-player">
+        <audio id="audio14" src="sepresenter-13.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio14')">« 5s</button>
+          <button onclick="playPause('audio14')" id="playPauseBtn_audio14">Play</button>
+          <button onclick="skip('audio14')">5s »</button>
+          <select onchange="changeSpeed('audio14', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio14" value="0" step="0.1" min="0" max="100" onchange="seek('audio14', this.value)">
+          <div class="time" id="time_audio14">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Qu’est-ce que tu aimes faire pendant ton temps libre ?</div>
+<div class="l1">Què t’agrada fer en el teu temps lliure?</div>
+
+    <div class="audio-section" id="audio15_container">
+      <div class="audio-player">
+        <audio id="audio15" src="sepresenter-14.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio15')">« 5s</button>
+          <button onclick="playPause('audio15')" id="playPauseBtn_audio15">Play</button>
+          <button onclick="skip('audio15')">5s »</button>
+          <select onchange="changeSpeed('audio15', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio15" value="0" step="0.1" min="0" max="100" onchange="seek('audio15', this.value)">
+          <div class="time" id="time_audio15">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je lis des bandes dessinées."</div>
+<div class="l1">"Llegeixo còmics."</div>
+
+    <div class="audio-section" id="audio16_container">
+      <div class="audio-player">
+        <audio id="audio16" src="sepresenter-15.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio16')">« 5s</button>
+          <button onclick="playPause('audio16')" id="playPauseBtn_audio16">Play</button>
+          <button onclick="skip('audio16')">5s »</button>
+          <select onchange="changeSpeed('audio16', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio16" value="0" step="0.1" min="0" max="100" onchange="seek('audio16', this.value)">
+          <div class="time" id="time_audio16">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’écoute de la musique et je joue de la guitare."</div>
+<div class="l1">"Escolto música i toco la guitarra."</div>
+
+    <div class="audio-section" id="audio17_container">
+      <div class="audio-player">
+        <audio id="audio17" src="sepresenter-16.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio17')">« 5s</button>
+          <button onclick="playPause('audio17')" id="playPauseBtn_audio17">Play</button>
+          <button onclick="skip('audio17')">5s »</button>
+          <select onchange="changeSpeed('audio17', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio17" value="0" step="0.1" min="0" max="100" onchange="seek('audio17', this.value)">
+          <div class="time" id="time_audio17">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’adore faire des gâteaux."</div>
+<div class="l1">"M’encanta fer pastissos."</div>
+
+    <div class="audio-section" id="audio18_container">
+      <div class="audio-player">
+        <audio id="audio18" src="sepresenter-17.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio18')">« 5s</button>
+          <button onclick="playPause('audio18')" id="playPauseBtn_audio18">Play</button>
+          <button onclick="skip('audio18')">5s »</button>
+          <select onchange="changeSpeed('audio18', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio18" value="0" step="0.1" min="0" max="100" onchange="seek('audio18', this.value)">
+          <div class="time" id="time_audio18">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Tu fais du sport ou une activité artistique ?</div>
+<div class="l1">Practiques algun esport o activitat artística?</div>
+
+    <div class="audio-section" id="audio19_container">
+      <div class="audio-player">
+        <audio id="audio19" src="sepresenter-18.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio19')">« 5s</button>
+          <button onclick="playPause('audio19')" id="playPauseBtn_audio19">Play</button>
+          <button onclick="skip('audio19')">5s »</button>
+          <select onchange="changeSpeed('audio19', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio19" value="0" step="0.1" min="0" max="100" onchange="seek('audio19', this.value)">
+          <div class="time" id="time_audio19">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, je fais de la danse classique."</div>
+<div class="l1">"Sí, faig dansa clàssica."</div>
+
+    <div class="audio-section" id="audio20_container">
+      <div class="audio-player">
+        <audio id="audio20" src="sepresenter-19.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio20')">« 5s</button>
+          <button onclick="playPause('audio20')" id="playPauseBtn_audio20">Play</button>
+          <button onclick="skip('audio20')">5s »</button>
+          <select onchange="changeSpeed('audio20', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio20" value="0" step="0.1" min="0" max="100" onchange="seek('audio20', this.value)">
+          <div class="time" id="time_audio20">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je joue au handball dans un club."</div>
+<div class="l1">"Jugo a handbol en un club."</div>
+
+    <div class="audio-section" id="audio21_container">
+      <div class="audio-player">
+        <audio id="audio21" src="sepresenter-20.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio21')">« 5s</button>
+          <button onclick="playPause('audio21')" id="playPauseBtn_audio21">Play</button>
+          <button onclick="skip('audio21')">5s »</button>
+          <select onchange="changeSpeed('audio21', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio21" value="0" step="0.1" min="0" max="100" onchange="seek('audio21', this.value)">
+          <div class="time" id="time_audio21">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je prends des cours de théâtre après l’école."</div>
+<div class="l1">"Faig classes de teatre després de l’escola."</div>
+
+    <div class="audio-section" id="audio22_container">
+      <div class="audio-player">
+        <audio id="audio22" src="sepresenter-21.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio22')">« 5s</button>
+          <button onclick="playPause('audio22')" id="playPauseBtn_audio22">Play</button>
+          <button onclick="skip('audio22')">5s »</button>
+          <select onchange="changeSpeed('audio22', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio22" value="0" step="0.1" min="0" max="100" onchange="seek('audio22', this.value)">
+          <div class="time" id="time_audio22">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Tu as une passion ?</div>
+<div class="l1">Tens alguna passió?</div>
+
+    <div class="audio-section" id="audio23_container">
+      <div class="audio-player">
+        <audio id="audio23" src="sepresenter-22.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio23')">« 5s</button>
+          <button onclick="playPause('audio23')" id="playPauseBtn_audio23">Play</button>
+          <button onclick="skip('audio23')">5s »</button>
+          <select onchange="changeSpeed('audio23', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio23" value="0" step="0.1" min="0" max="100" onchange="seek('audio23', this.value)">
+          <div class="time" id="time_audio23">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, les animaux, surtout les chevaux."</div>
+<div class="l1">"Sí, els animals, sobretot els cavalls."</div>
+
+    <div class="audio-section" id="audio24_container">
+      <div class="audio-player">
+        <audio id="audio24" src="sepresenter-23.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio24')">« 5s</button>
+          <button onclick="playPause('audio24')" id="playPauseBtn_audio24">Play</button>
+          <button onclick="skip('audio24')">5s »</button>
+          <select onchange="changeSpeed('audio24', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio24" value="0" step="0.1" min="0" max="100" onchange="seek('audio24', this.value)">
+          <div class="time" id="time_audio24">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’adore programmer des jeux vidéo."</div>
+<div class="l1">"M’encanta programar videojocs."</div>
+
+    <div class="audio-section" id="audio25_container">
+      <div class="audio-player">
+        <audio id="audio25" src="sepresenter-24.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio25')">« 5s</button>
+          <button onclick="playPause('audio25')" id="playPauseBtn_audio25">Play</button>
+          <button onclick="skip('audio25')">5s »</button>
+          <select onchange="changeSpeed('audio25', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio25" value="0" step="0.1" min="0" max="100" onchange="seek('audio25', this.value)">
+          <div class="time" id="time_audio25">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Ma passion, c’est la natation."</div>
+<div class="l1">"La meva passió és la natació."</div>
+
+    <div class="audio-section" id="audio26_container">
+      <div class="audio-player">
+        <audio id="audio26" src="sepresenter-25.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio26')">« 5s</button>
+          <button onclick="playPause('audio26')" id="playPauseBtn_audio26">Play</button>
+          <button onclick="skip('audio26')">5s »</button>
+          <select onchange="changeSpeed('audio26', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio26" value="0" step="0.1" min="0" max="100" onchange="seek('audio26', this.value)">
+          <div class="time" id="time_audio26">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Pour découvrir d’où il/elle vient</div>
+<div class="l1">Per descobrir d’on és</div>
+
+    <div class="audio-section" id="audio27_container">
+      <div class="audio-player">
+        <audio id="audio27" src="sepresenter-26.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio27')">« 5s</button>
+          <button onclick="playPause('audio27')" id="playPauseBtn_audio27">Play</button>
+          <button onclick="skip('audio27')">5s »</button>
+          <select onchange="changeSpeed('audio27', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio27" value="0" step="0.1" min="0" max="100" onchange="seek('audio27', this.value)">
+          <div class="time" id="time_audio27">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">D’où viens-tu ?</div>
+<div class="l1">D’on ets?</div>
+
+    <div class="audio-section" id="audio28_container">
+      <div class="audio-player">
+        <audio id="audio28" src="sepresenter-27.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio28')">« 5s</button>
+          <button onclick="playPause('audio28')" id="playPauseBtn_audio28">Play</button>
+          <button onclick="skip('audio28')">5s »</button>
+          <select onchange="changeSpeed('audio28', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio28" value="0" step="0.1" min="0" max="100" onchange="seek('audio28', this.value)">
+          <div class="time" id="time_audio28">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je viens de Marseille."</div>
+<div class="l1">"Sóc de Marsella."</div>
+
+    <div class="audio-section" id="audio29_container">
+      <div class="audio-player">
+        <audio id="audio29" src="sepresenter-28.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio29')">« 5s</button>
+          <button onclick="playPause('audio29')" id="playPauseBtn_audio29">Play</button>
+          <button onclick="skip('audio29')">5s »</button>
+          <select onchange="changeSpeed('audio29', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio29" value="0" step="0.1" min="0" max="100" onchange="seek('audio29', this.value)">
+          <div class="time" id="time_audio29">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je suis originaire de Madrid."</div>
+<div class="l1">"Sóc de Madrid."</div>
+
+    <div class="audio-section" id="audio30_container">
+      <div class="audio-player">
+        <audio id="audio30" src="sepresenter-29.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio30')">« 5s</button>
+          <button onclick="playPause('audio30')" id="playPauseBtn_audio30">Play</button>
+          <button onclick="skip('audio30')">5s »</button>
+          <select onchange="changeSpeed('audio30', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio30" value="0" step="0.1" min="0" max="100" onchange="seek('audio30', this.value)">
+          <div class="time" id="time_audio30">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je viens de Rome."</div>
+<div class="l1">"Sóc de Roma."</div>
+
+    <div class="audio-section" id="audio31_container">
+      <div class="audio-player">
+        <audio id="audio31" src="sepresenter-30.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio31')">« 5s</button>
+          <button onclick="playPause('audio31')" id="playPauseBtn_audio31">Play</button>
+          <button onclick="skip('audio31')">5s »</button>
+          <select onchange="changeSpeed('audio31', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio31" value="0" step="0.1" min="0" max="100" onchange="seek('audio31', this.value)">
+          <div class="time" id="time_audio31">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Tu habites où ?</div>
+<div class="l1">On vius?</div>
+
+    <div class="audio-section" id="audio32_container">
+      <div class="audio-player">
+        <audio id="audio32" src="sepresenter-31.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio32')">« 5s</button>
+          <button onclick="playPause('audio32')" id="playPauseBtn_audio32">Play</button>
+          <button onclick="skip('audio32')">5s »</button>
+          <select onchange="changeSpeed('audio32', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio32" value="0" step="0.1" min="0" max="100" onchange="seek('audio32', this.value)">
+          <div class="time" id="time_audio32">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’habite à Lyon, dans le quartier de la Croix-Rousse."</div>
+<div class="l1">"Visc a Lió, al barri de la Croix-Rousse."</div>
+
+    <div class="audio-section" id="audio33_container">
+      <div class="audio-player">
+        <audio id="audio33" src="sepresenter-32.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio33')">« 5s</button>
+          <button onclick="playPause('audio33')" id="playPauseBtn_audio33">Play</button>
+          <button onclick="skip('audio33')">5s »</button>
+          <select onchange="changeSpeed('audio33', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio33" value="0" step="0.1" min="0" max="100" onchange="seek('audio33', this.value)">
+          <div class="time" id="time_audio33">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’habite dans un petit village près de Genève."</div>
+<div class="l1">"Visc en un poble petit a prop de Ginebra."</div>
+
+    <div class="audio-section" id="audio34_container">
+      <div class="audio-player">
+        <audio id="audio34" src="sepresenter-33.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio34')">« 5s</button>
+          <button onclick="playPause('audio34')" id="playPauseBtn_audio34">Play</button>
+          <button onclick="skip('audio34')">5s »</button>
+          <select onchange="changeSpeed('audio34', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio34" value="0" step="0.1" min="0" max="100" onchange="seek('audio34', this.value)">
+          <div class="time" id="time_audio34">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je vis à Barcelone, en Espagne."</div>
+<div class="l1">"Visc a Barcelona, a Espanya."</div>
+
+    <div class="audio-section" id="audio35_container">
+      <div class="audio-player">
+        <audio id="audio35" src="sepresenter-34.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio35')">« 5s</button>
+          <button onclick="playPause('audio35')" id="playPauseBtn_audio35">Play</button>
+          <button onclick="skip('audio35')">5s »</button>
+          <select onchange="changeSpeed('audio35', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio35" value="0" step="0.1" min="0" max="100" onchange="seek('audio35', this.value)">
+          <div class="time" id="time_audio35">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Dans quel pays ou quelle ville tu habites ?</div>
+<div class="l1">En quin país o ciutat vius?</div>
+
+    <div class="audio-section" id="audio36_container">
+      <div class="audio-player">
+        <audio id="audio36" src="sepresenter-35.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio36')">« 5s</button>
+          <button onclick="playPause('audio36')" id="playPauseBtn_audio36">Play</button>
+          <button onclick="skip('audio36')">5s »</button>
+          <select onchange="changeSpeed('audio36', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio36" value="0" step="0.1" min="0" max="100" onchange="seek('audio36', this.value)">
+          <div class="time" id="time_audio36">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’habite à Paris, en France."</div>
+<div class="l1">"Visc a París, a França."</div>
+
+    <div class="audio-section" id="audio37_container">
+      <div class="audio-player">
+        <audio id="audio37" src="sepresenter-36.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio37')">« 5s</button>
+          <button onclick="playPause('audio37')" id="playPauseBtn_audio37">Play</button>
+          <button onclick="skip('audio37')">5s »</button>
+          <select onchange="changeSpeed('audio37', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio37" value="0" step="0.1" min="0" max="100" onchange="seek('audio37', this.value)">
+          <div class="time" id="time_audio37">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je vis à Lisbonne, au Portugal."</div>
+<div class="l1">"Visc a Lisboa, a Portugal."</div>
+
+    <div class="audio-section" id="audio38_container">
+      <div class="audio-player">
+        <audio id="audio38" src="sepresenter-37.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio38')">« 5s</button>
+          <button onclick="playPause('audio38')" id="playPauseBtn_audio38">Play</button>
+          <button onclick="skip('audio38')">5s »</button>
+          <select onchange="changeSpeed('audio38', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio38" value="0" step="0.1" min="0" max="100" onchange="seek('audio38', this.value)">
+          <div class="time" id="time_audio38">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je viens de Bruxelles, en Belgique."</div>
+<div class="l1">"Visc a Brussel·les, a Bèlgica."</div>
+
+    <div class="audio-section" id="audio39_container">
+      <div class="audio-player">
+        <audio id="audio39" src="sepresenter-38.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio39')">« 5s</button>
+          <button onclick="playPause('audio39')" id="playPauseBtn_audio39">Play</button>
+          <button onclick="skip('audio39')">5s »</button>
+          <select onchange="changeSpeed('audio39', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio39" value="0" step="0.1" min="0" max="100" onchange="seek('audio39', this.value)">
+          <div class="time" id="time_audio39">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Tu viens de quelle région ?</div>
+<div class="l1">D’on ets de la regió?</div>
+
+    <div class="audio-section" id="audio40_container">
+      <div class="audio-player">
+        <audio id="audio40" src="sepresenter-39.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio40')">« 5s</button>
+          <button onclick="playPause('audio40')" id="playPauseBtn_audio40">Play</button>
+          <button onclick="skip('audio40')">5s »</button>
+          <select onchange="changeSpeed('audio40', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio40" value="0" step="0.1" min="0" max="100" onchange="seek('audio40', this.value)">
+          <div class="time" id="time_audio40">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je viens d’Occitanie, dans le sud de la France."</div>
+<div class="l1">"Sóc d’Occitània, al sud de França."</div>
+
+    <div class="audio-section" id="audio41_container">
+      <div class="audio-player">
+        <audio id="audio41" src="sepresenter-40.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio41')">« 5s</button>
+          <button onclick="playPause('audio41')" id="playPauseBtn_audio41">Play</button>
+          <button onclick="skip('audio41')">5s »</button>
+          <select onchange="changeSpeed('audio41', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio41" value="0" step="0.1" min="0" max="100" onchange="seek('audio41', this.value)">
+          <div class="time" id="time_audio41">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je suis de Catalogne, en Espagne."</div>
+<div class="l1">"Sóc de Catalunya, a Espanya."</div>
+
+    <div class="audio-section" id="audio42_container">
+      <div class="audio-player">
+        <audio id="audio42" src="sepresenter-41.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio42')">« 5s</button>
+          <button onclick="playPause('audio42')" id="playPauseBtn_audio42">Play</button>
+          <button onclick="skip('audio42')">5s »</button>
+          <select onchange="changeSpeed('audio42', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio42" value="0" step="0.1" min="0" max="100" onchange="seek('audio42', this.value)">
+          <div class="time" id="time_audio42">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je viens d’Andalousie."</div>
+<div class="l1">"Sóc d’Andalusia."</div>
+
+    <div class="audio-section" id="audio43_container">
+      <div class="audio-player">
+        <audio id="audio43" src="sepresenter-42.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio43')">« 5s</button>
+          <button onclick="playPause('audio43')" id="playPauseBtn_audio43">Play</button>
+          <button onclick="skip('audio43')">5s »</button>
+          <select onchange="changeSpeed('audio43', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio43" value="0" step="0.1" min="0" max="100" onchange="seek('audio43', this.value)">
+          <div class="time" id="time_audio43">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Pour découvrir la famille</div>
+<div class="l1">Per descobrir la família</div>
+
+    <div class="audio-section" id="audio44_container">
+      <div class="audio-player">
+        <audio id="audio44" src="sepresenter-43.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio44')">« 5s</button>
+          <button onclick="playPause('audio44')" id="playPauseBtn_audio44">Play</button>
+          <button onclick="skip('audio44')">5s »</button>
+          <select onchange="changeSpeed('audio44', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio44" value="0" step="0.1" min="0" max="100" onchange="seek('audio44', this.value)">
+          <div class="time" id="time_audio44">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Tu as des frères ou des sœurs ?</div>
+<div class="l1">Tens germans o germanes?</div>
+
+    <div class="audio-section" id="audio45_container">
+      <div class="audio-player">
+        <audio id="audio45" src="sepresenter-44.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio45')">« 5s</button>
+          <button onclick="playPause('audio45')" id="playPauseBtn_audio45">Play</button>
+          <button onclick="skip('audio45')">5s »</button>
+          <select onchange="changeSpeed('audio45', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio45" value="0" step="0.1" min="0" max="100" onchange="seek('audio45', this.value)">
+          <div class="time" id="time_audio45">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, j’ai une grande sœur."</div>
+<div class="l1">"Sí, tinc una germana gran."</div>
+
+    <div class="audio-section" id="audio46_container">
+      <div class="audio-player">
+        <audio id="audio46" src="sepresenter-45.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio46')">« 5s</button>
+          <button onclick="playPause('audio46')" id="playPauseBtn_audio46">Play</button>
+          <button onclick="skip('audio46')">5s »</button>
+          <select onchange="changeSpeed('audio46', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio46" value="0" step="0.1" min="0" max="100" onchange="seek('audio46', this.value)">
+          <div class="time" id="time_audio46">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Non, je suis fille unique."</div>
+<div class="l1">"No, sóc filla única."</div>
+
+    <div class="audio-section" id="audio47_container">
+      <div class="audio-player">
+        <audio id="audio47" src="sepresenter-46.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio47')">« 5s</button>
+          <button onclick="playPause('audio47')" id="playPauseBtn_audio47">Play</button>
+          <button onclick="skip('audio47')">5s »</button>
+          <select onchange="changeSpeed('audio47', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio47" value="0" step="0.1" min="0" max="100" onchange="seek('audio47', this.value)">
+          <div class="time" id="time_audio47">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, j’ai deux frères."</div>
+<div class="l1">"Sí, tinc dos germans."</div>
+
+    <div class="audio-section" id="audio48_container">
+      <div class="audio-player">
+        <audio id="audio48" src="sepresenter-47.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio48')">« 5s</button>
+          <button onclick="playPause('audio48')" id="playPauseBtn_audio48">Play</button>
+          <button onclick="skip('audio48')">5s »</button>
+          <select onchange="changeSpeed('audio48', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio48" value="0" step="0.1" min="0" max="100" onchange="seek('audio48', this.value)">
+          <div class="time" id="time_audio48">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Tu as combien de frères et sœurs ?</div>
+<div class="l1">Quants germans o germanes tens?</div>
+
+    <div class="audio-section" id="audio49_container">
+      <div class="audio-player">
+        <audio id="audio49" src="sepresenter-48.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio49')">« 5s</button>
+          <button onclick="playPause('audio49')" id="playPauseBtn_audio49">Play</button>
+          <button onclick="skip('audio49')">5s »</button>
+          <select onchange="changeSpeed('audio49', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio49" value="0" step="0.1" min="0" max="100" onchange="seek('audio49', this.value)">
+          <div class="time" id="time_audio49">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’ai un frère et une sœur."</div>
+<div class="l1">"Tinc un germà i una germana."</div>
+
+    <div class="audio-section" id="audio50_container">
+      <div class="audio-player">
+        <audio id="audio50" src="sepresenter-49.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio50')">« 5s</button>
+          <button onclick="playPause('audio50')" id="playPauseBtn_audio50">Play</button>
+          <button onclick="skip('audio50')">5s »</button>
+          <select onchange="changeSpeed('audio50', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio50" value="0" step="0.1" min="0" max="100" onchange="seek('audio50', this.value)">
+          <div class="time" id="time_audio50">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Je n’ai qu’une petite sœur."</div>
+<div class="l1">"Només tinc una germana petita."</div>
+
+    <div class="audio-section" id="audio51_container">
+      <div class="audio-player">
+        <audio id="audio51" src="sepresenter-50.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio51')">« 5s</button>
+          <button onclick="playPause('audio51')" id="playPauseBtn_audio51">Play</button>
+          <button onclick="skip('audio51')">5s »</button>
+          <select onchange="changeSpeed('audio51', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio51" value="0" step="0.1" min="0" max="100" onchange="seek('audio51', this.value)">
+          <div class="time" id="time_audio51">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’ai trois frères !"</div>
+<div class="l1">"Tinc tres germans!"</div>
+
+    <div class="audio-section" id="audio52_container">
+      <div class="audio-player">
+        <audio id="audio52" src="sepresenter-51.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio52')">« 5s</button>
+          <button onclick="playPause('audio52')" id="playPauseBtn_audio52">Play</button>
+          <button onclick="skip('audio52')">5s »</button>
+          <select onchange="changeSpeed('audio52', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio52" value="0" step="0.1" min="0" max="100" onchange="seek('audio52', this.value)">
+          <div class="time" id="time_audio52">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Ils ont quel âge, tes frères ou sœurs ?</div>
+<div class="l1">Quina edat tenen els teus germans o germanes?</div>
+
+    <div class="audio-section" id="audio53_container">
+      <div class="audio-player">
+        <audio id="audio53" src="sepresenter-52.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio53')">« 5s</button>
+          <button onclick="playPause('audio53')" id="playPauseBtn_audio53">Play</button>
+          <button onclick="skip('audio53')">5s »</button>
+          <select onchange="changeSpeed('audio53', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio53" value="0" step="0.1" min="0" max="100" onchange="seek('audio53', this.value)">
+          <div class="time" id="time_audio53">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Ma sœur a 16 ans et mon frère a 10 ans."</div>
+<div class="l1">"La meva germana té 16 anys i el meu germà en té 10."</div>
+
+    <div class="audio-section" id="audio54_container">
+      <div class="audio-player">
+        <audio id="audio54" src="sepresenter-53.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio54')">« 5s</button>
+          <button onclick="playPause('audio54')" id="playPauseBtn_audio54">Play</button>
+          <button onclick="skip('audio54')">5s »</button>
+          <select onchange="changeSpeed('audio54', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio54" value="0" step="0.1" min="0" max="100" onchange="seek('audio54', this.value)">
+          <div class="time" id="time_audio54">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Mon frère a 12 ans comme moi, on est jumeaux."</div>
+<div class="l1">"El meu germà té 12 anys com jo, som bessons."</div>
+
+    <div class="audio-section" id="audio55_container">
+      <div class="audio-player">
+        <audio id="audio55" src="sepresenter-54.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio55')">« 5s</button>
+          <button onclick="playPause('audio55')" id="playPauseBtn_audio55">Play</button>
+          <button onclick="skip('audio55')">5s »</button>
+          <select onchange="changeSpeed('audio55', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio55" value="0" step="0.1" min="0" max="100" onchange="seek('audio55', this.value)">
+          <div class="time" id="time_audio55">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Mes deux frères ont 14 et 8 ans."</div>
+<div class="l1">"Els meus dos germans tenen 14 i 8 anys."</div>
+
+    <div class="audio-section" id="audio56_container">
+      <div class="audio-player">
+        <audio id="audio56" src="sepresenter-55.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio56')">« 5s</button>
+          <button onclick="playPause('audio56')" id="playPauseBtn_audio56">Play</button>
+          <button onclick="skip('audio56')">5s »</button>
+          <select onchange="changeSpeed('audio56', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio56" value="0" step="0.1" min="0" max="100" onchange="seek('audio56', this.value)">
+          <div class="time" id="time_audio56">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Tu vis avec ta famille ?</div>
+<div class="l1">Vius amb la teva família?</div>
+
+    <div class="audio-section" id="audio57_container">
+      <div class="audio-player">
+        <audio id="audio57" src="sepresenter-56.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio57')">« 5s</button>
+          <button onclick="playPause('audio57')" id="playPauseBtn_audio57">Play</button>
+          <button onclick="skip('audio57')">5s »</button>
+          <select onchange="changeSpeed('audio57', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio57" value="0" step="0.1" min="0" max="100" onchange="seek('audio57', this.value)">
+          <div class="time" id="time_audio57">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, avec mes parents et ma petite sœur."</div>
+<div class="l1">"Sí, amb els meus pares i la meva germana petita."</div>
+
+    <div class="audio-section" id="audio58_container">
+      <div class="audio-player">
+        <audio id="audio58" src="sepresenter-57.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio58')">« 5s</button>
+          <button onclick="playPause('audio58')" id="playPauseBtn_audio58">Play</button>
+          <button onclick="skip('audio58')">5s »</button>
+          <select onchange="changeSpeed('audio58', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio58" value="0" step="0.1" min="0" max="100" onchange="seek('audio58', this.value)">
+          <div class="time" id="time_audio58">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, je vis avec ma mère et mon grand frère."</div>
+<div class="l1">"Sí, visc amb la meva mare i el meu germà gran."</div>
+
+    <div class="audio-section" id="audio59_container">
+      <div class="audio-player">
+        <audio id="audio59" src="sepresenter-58.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio59')">« 5s</button>
+          <button onclick="playPause('audio59')" id="playPauseBtn_audio59">Play</button>
+          <button onclick="skip('audio59')">5s »</button>
+          <select onchange="changeSpeed('audio59', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio59" value="0" step="0.1" min="0" max="100" onchange="seek('audio59', this.value)">
+          <div class="time" id="time_audio59">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Non, j’habite une semaine chez papa et une semaine chez maman."</div>
+<div class="l1">"No, visc una setmana amb el pare i una setmana amb la mare."</div>
+
+    <div class="audio-section" id="audio60_container">
+      <div class="audio-player">
+        <audio id="audio60" src="sepresenter-59.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio60')">« 5s</button>
+          <button onclick="playPause('audio60')" id="playPauseBtn_audio60">Play</button>
+          <button onclick="skip('audio60')">5s »</button>
+          <select onchange="changeSpeed('audio60', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio60" value="0" step="0.1" min="0" max="100" onchange="seek('audio60', this.value)">
+          <div class="time" id="time_audio60">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Tu es fils/fille unique ?</div>
+<div class="l1">Ets fill/filla únic(a)?</div>
+
+    <div class="audio-section" id="audio61_container">
+      <div class="audio-player">
+        <audio id="audio61" src="sepresenter-60.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio61')">« 5s</button>
+          <button onclick="playPause('audio61')" id="playPauseBtn_audio61">Play</button>
+          <button onclick="skip('audio61')">5s »</button>
+          <select onchange="changeSpeed('audio61', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio61" value="0" step="0.1" min="0" max="100" onchange="seek('audio61', this.value)">
+          <div class="time" id="time_audio61">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Non, j’ai deux sœurs."</div>
+<div class="l1">"No, tinc dues germanes."</div>
+
+    <div class="audio-section" id="audio62_container">
+      <div class="audio-player">
+        <audio id="audio62" src="sepresenter-61.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio62')">« 5s</button>
+          <button onclick="playPause('audio62')" id="playPauseBtn_audio62">Play</button>
+          <button onclick="skip('audio62')">5s »</button>
+          <select onchange="changeSpeed('audio62', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio62" value="0" step="0.1" min="0" max="100" onchange="seek('audio62', this.value)">
+          <div class="time" id="time_audio62">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, je suis fils unique."</div>
+<div class="l1">"Sí, sóc fill únic."</div>
+
+    <div class="audio-section" id="audio63_container">
+      <div class="audio-player">
+        <audio id="audio63" src="sepresenter-62.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio63')">« 5s</button>
+          <button onclick="playPause('audio63')" id="playPauseBtn_audio63">Play</button>
+          <button onclick="skip('audio63')">5s »</button>
+          <select onchange="changeSpeed('audio63', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio63" value="0" step="0.1" min="0" max="100" onchange="seek('audio63', this.value)">
+          <div class="time" id="time_audio63">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Non, j’ai un frère aîné."</div>
+<div class="l1">"No, tinc un germà gran."</div>
+
+    <div class="audio-section" id="audio64_container">
+      <div class="audio-player">
+        <audio id="audio64" src="sepresenter-63.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio64')">« 5s</button>
+          <button onclick="playPause('audio64')" id="playPauseBtn_audio64">Play</button>
+          <button onclick="skip('audio64')">5s »</button>
+          <select onchange="changeSpeed('audio64', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio64" value="0" step="0.1" min="0" max="100" onchange="seek('audio64', this.value)">
+          <div class="time" id="time_audio64">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Pour découvrir l’animal de compagnie</div>
+<div class="l1">Per descobrir els animals de companyia</div>
+
+    <div class="audio-section" id="audio65_container">
+      <div class="audio-player">
+        <audio id="audio65" src="sepresenter-64.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio65')">« 5s</button>
+          <button onclick="playPause('audio65')" id="playPauseBtn_audio65">Play</button>
+          <button onclick="skip('audio65')">5s »</button>
+          <select onchange="changeSpeed('audio65', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio65" value="0" step="0.1" min="0" max="100" onchange="seek('audio65', this.value)">
+          <div class="time" id="time_audio65">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Est-ce que tu as un animal de compagnie ?</div>
+<div class="l1">Tens algun animal de companyia?</div>
+
+    <div class="audio-section" id="audio66_container">
+      <div class="audio-player">
+        <audio id="audio66" src="sepresenter-65.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio66')">« 5s</button>
+          <button onclick="playPause('audio66')" id="playPauseBtn_audio66">Play</button>
+          <button onclick="skip('audio66')">5s »</button>
+          <select onchange="changeSpeed('audio66', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio66" value="0" step="0.1" min="0" max="100" onchange="seek('audio66', this.value)">
+          <div class="time" id="time_audio66">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, j’ai un chat."</div>
+<div class="l1">"Sí, tinc un gat."</div>
+
+    <div class="audio-section" id="audio67_container">
+      <div class="audio-player">
+        <audio id="audio67" src="sepresenter-66.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio67')">« 5s</button>
+          <button onclick="playPause('audio67')" id="playPauseBtn_audio67">Play</button>
+          <button onclick="skip('audio67')">5s »</button>
+          <select onchange="changeSpeed('audio67', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio67" value="0" step="0.1" min="0" max="100" onchange="seek('audio67', this.value)">
+          <div class="time" id="time_audio67">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Non, mais j’aimerais avoir un chien."</div>
+<div class="l1">"No, però m’agradaria tenir un gos."</div>
+
+    <div class="audio-section" id="audio68_container">
+      <div class="audio-player">
+        <audio id="audio68" src="sepresenter-67.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio68')">« 5s</button>
+          <button onclick="playPause('audio68')" id="playPauseBtn_audio68">Play</button>
+          <button onclick="skip('audio68')">5s »</button>
+          <select onchange="changeSpeed('audio68', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio68" value="0" step="0.1" min="0" max="100" onchange="seek('audio68', this.value)">
+          <div class="time" id="time_audio68">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, j’ai deux lapins."</div>
+<div class="l1">"Sí, tinc dos conills."</div>
+
+    <div class="audio-section" id="audio69_container">
+      <div class="audio-player">
+        <audio id="audio69" src="sepresenter-68.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio69')">« 5s</button>
+          <button onclick="playPause('audio69')" id="playPauseBtn_audio69">Play</button>
+          <button onclick="skip('audio69')">5s »</button>
+          <select onchange="changeSpeed('audio69', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio69" value="0" step="0.1" min="0" max="100" onchange="seek('audio69', this.value)">
+          <div class="time" id="time_audio69">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Quel est le nom de ton animal ?</div>
+<div class="l1">Quin és el nom del teu animal?</div>
+
+    <div class="audio-section" id="audio70_container">
+      <div class="audio-player">
+        <audio id="audio70" src="sepresenter-69.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio70')">« 5s</button>
+          <button onclick="playPause('audio70')" id="playPauseBtn_audio70">Play</button>
+          <button onclick="skip('audio70')">5s »</button>
+          <select onchange="changeSpeed('audio70', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio70" value="0" step="0.1" min="0" max="100" onchange="seek('audio70', this.value)">
+          <div class="time" id="time_audio70">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Mon chien s’appelle Rex."</div>
+<div class="l1">"El meu gos es diu Rex."</div>
+
+    <div class="audio-section" id="audio71_container">
+      <div class="audio-player">
+        <audio id="audio71" src="sepresenter-70.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio71')">« 5s</button>
+          <button onclick="playPause('audio71')" id="playPauseBtn_audio71">Play</button>
+          <button onclick="skip('audio71')">5s »</button>
+          <select onchange="changeSpeed('audio71', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio71" value="0" step="0.1" min="0" max="100" onchange="seek('audio71', this.value)">
+          <div class="time" id="time_audio71">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Mon chat s’appelle Minou."</div>
+<div class="l1">"El meu gat es diu Minou."</div>
+
+    <div class="audio-section" id="audio72_container">
+      <div class="audio-player">
+        <audio id="audio72" src="sepresenter-71.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio72')">« 5s</button>
+          <button onclick="playPause('audio72')" id="playPauseBtn_audio72">Play</button>
+          <button onclick="skip('audio72')">5s »</button>
+          <select onchange="changeSpeed('audio72', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio72" value="0" step="0.1" min="0" max="100" onchange="seek('audio72', this.value)">
+          <div class="time" id="time_audio72">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Mon poisson rouge s’appelle Nemo."</div>
+<div class="l1">"El meu peix es diu Nemo."</div>
+
+    <div class="audio-section" id="audio73_container">
+      <div class="audio-player">
+        <audio id="audio73" src="sepresenter-72.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio73')">« 5s</button>
+          <button onclick="playPause('audio73')" id="playPauseBtn_audio73">Play</button>
+          <button onclick="skip('audio73')">5s »</button>
+          <select onchange="changeSpeed('audio73', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio73" value="0" step="0.1" min="0" max="100" onchange="seek('audio73', this.value)">
+          <div class="time" id="time_audio73">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Quel type d’animal as-tu ?</div>
+<div class="l1">Quin tipus d’animal tens?</div>
+
+    <div class="audio-section" id="audio74_container">
+      <div class="audio-player">
+        <audio id="audio74" src="sepresenter-73.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio74')">« 5s</button>
+          <button onclick="playPause('audio74')" id="playPauseBtn_audio74">Play</button>
+          <button onclick="skip('audio74')">5s »</button>
+          <select onchange="changeSpeed('audio74', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio74" value="0" step="0.1" min="0" max="100" onchange="seek('audio74', this.value)">
+          <div class="time" id="time_audio74">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’ai un hamster."</div>
+<div class="l1">"Tinc un hàmster."</div>
+
+    <div class="audio-section" id="audio75_container">
+      <div class="audio-player">
+        <audio id="audio75" src="sepresenter-74.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio75')">« 5s</button>
+          <button onclick="playPause('audio75')" id="playPauseBtn_audio75">Play</button>
+          <button onclick="skip('audio75')">5s »</button>
+          <select onchange="changeSpeed('audio75', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio75" value="0" step="0.1" min="0" max="100" onchange="seek('audio75', this.value)">
+          <div class="time" id="time_audio75">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’ai une tortue."</div>
+<div class="l1">"Tinc una tortuga."</div>
+
+    <div class="audio-section" id="audio76_container">
+      <div class="audio-player">
+        <audio id="audio76" src="sepresenter-75.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio76')">« 5s</button>
+          <button onclick="playPause('audio76')" id="playPauseBtn_audio76">Play</button>
+          <button onclick="skip('audio76')">5s »</button>
+          <select onchange="changeSpeed('audio76', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio76" value="0" step="0.1" min="0" max="100" onchange="seek('audio76', this.value)">
+          <div class="time" id="time_audio76">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"J’ai un perroquet."</div>
+<div class="l1">"Tinc un lloro."</div>
+
+    <div class="audio-section" id="audio77_container">
+      <div class="audio-player">
+        <audio id="audio77" src="sepresenter-76.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio77')">« 5s</button>
+          <button onclick="playPause('audio77')" id="playPauseBtn_audio77">Play</button>
+          <button onclick="skip('audio77')">5s »</button>
+          <select onchange="changeSpeed('audio77', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio77" value="0" step="0.1" min="0" max="100" onchange="seek('audio77', this.value)">
+          <div class="time" id="time_audio77">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Tu as toujours eu des animaux chez toi ?</div>
+<div class="l1">Sempre has tingut animals a casa?</div>
+
+    <div class="audio-section" id="audio78_container">
+      <div class="audio-player">
+        <audio id="audio78" src="sepresenter-77.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio78')">« 5s</button>
+          <button onclick="playPause('audio78')" id="playPauseBtn_audio78">Play</button>
+          <button onclick="skip('audio78')">5s »</button>
+          <select onchange="changeSpeed('audio78', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio78" value="0" step="0.1" min="0" max="100" onchange="seek('audio78', this.value)">
+          <div class="time" id="time_audio78">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Non, j’ai eu mon chien il y a deux ans."</div>
+<div class="l1">"No, vaig tenir el meu gos fa dos anys."</div>
+
+    <div class="audio-section" id="audio79_container">
+      <div class="audio-player">
+        <audio id="audio79" src="sepresenter-78.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio79')">« 5s</button>
+          <button onclick="playPause('audio79')" id="playPauseBtn_audio79">Play</button>
+          <button onclick="skip('audio79')">5s »</button>
+          <select onchange="changeSpeed('audio79', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio79" value="0" step="0.1" min="0" max="100" onchange="seek('audio79', this.value)">
+          <div class="time" id="time_audio79">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, j’ai toujours eu des chats."</div>
+<div class="l1">"Sí, sempre he tingut gats."</div>
+
+    <div class="audio-section" id="audio80_container">
+      <div class="audio-player">
+        <audio id="audio80" src="sepresenter-79.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio80')">« 5s</button>
+          <button onclick="playPause('audio80')" id="playPauseBtn_audio80">Play</button>
+          <button onclick="skip('audio80')">5s »</button>
+          <select onchange="changeSpeed('audio80', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio80" value="0" step="0.1" min="0" max="100" onchange="seek('audio80', this.value)">
+          <div class="time" id="time_audio80">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Non, c’est la première fois qu’on a un animal."</div>
+<div class="l1">"No, és la primera vegada que tenim un animal."</div>
+
+    <div class="audio-section" id="audio81_container">
+      <div class="audio-player">
+        <audio id="audio81" src="sepresenter-80.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio81')">« 5s</button>
+          <button onclick="playPause('audio81')" id="playPauseBtn_audio81">Play</button>
+          <button onclick="skip('audio81')">5s »</button>
+          <select onchange="changeSpeed('audio81', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio81" value="0" step="0.1" min="0" max="100" onchange="seek('audio81', this.value)">
+          <div class="time" id="time_audio81">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">Si tu n’as pas d’animal, tu aimerais en avoir un ?</div>
+<div class="l1">Si no tens cap animal, t’agradaria tenir-ne un?</div>
+
+    <div class="audio-section" id="audio82_container">
+      <div class="audio-player">
+        <audio id="audio82" src="sepresenter-81.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio82')">« 5s</button>
+          <button onclick="playPause('audio82')" id="playPauseBtn_audio82">Play</button>
+          <button onclick="skip('audio82')">5s »</button>
+          <select onchange="changeSpeed('audio82', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio82" value="0" step="0.1" min="0" max="100" onchange="seek('audio82', this.value)">
+          <div class="time" id="time_audio82">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, j’aimerais un chat, j’adore les félins."</div>
+<div class="l1">"Sí, m’agradaria un gat, m’encanten els felins."</div>
+
+    <div class="audio-section" id="audio83_container">
+      <div class="audio-player">
+        <audio id="audio83" src="sepresenter-82.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio83')">« 5s</button>
+          <button onclick="playPause('audio83')" id="playPauseBtn_audio83">Play</button>
+          <button onclick="skip('audio83')">5s »</button>
+          <select onchange="changeSpeed('audio83', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio83" value="0" step="0.1" min="0" max="100" onchange="seek('audio83', this.value)">
+          <div class="time" id="time_audio83">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Oui, un cheval, mais mes parents disent que c’est impossible."</div>
+<div class="l1">"Sí, un cavall, però els meus pares diuen que és impossible."</div>
+
+    <div class="audio-section" id="audio84_container">
+      <div class="audio-player">
+        <audio id="audio84" src="sepresenter-83.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio84')">« 5s</button>
+          <button onclick="playPause('audio84')" id="playPauseBtn_audio84">Play</button>
+          <button onclick="skip('audio84')">5s »</button>
+          <select onchange="changeSpeed('audio84', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio84" value="0" step="0.1" min="0" max="100" onchange="seek('audio84', this.value)">
+          <div class="time" id="time_audio84">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      <div class="l2">"Non, je préfère ne pas avoir d’animaux."</div>
+<div class="l1">"No, prefereixo no tenir animals."</div>
+
+    <div class="audio-section" id="audio85_container">
+      <div class="audio-player">
+        <audio id="audio85" src="sepresenter-84.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio85')">« 5s</button>
+          <button onclick="playPause('audio85')" id="playPauseBtn_audio85">Play</button>
+          <button onclick="skip('audio85')">5s »</button>
+          <select onchange="changeSpeed('audio85', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar_audio85" value="0" step="0.1" min="0" max="100" onchange="seek('audio85', this.value)">
+          <div class="time" id="time_audio85">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+      
+  <script>
+    // Function to toggle play/pause
+    function playPause(audioId) {
+      var audio = document.getElementById(audioId);
+      var playPauseBtn = document.getElementById('playPauseBtn_' + audioId);
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = 'Pause';
+      } else {
+        audio.pause();
+        playPauseBtn.textContent = 'Play';
+      }
+    }
+
+    // Function to rewind 5 seconds
+    function rewind(audioId) {
+      var audio = document.getElementById(audioId);
+      audio.currentTime = Math.max(0, audio.currentTime - 5);
+    }
+
+    // Function to skip forward 5 seconds
+    function skip(audioId) {
+      var audio = document.getElementById(audioId);
+      audio.currentTime = Math.min(audio.duration, audio.currentTime + 5);
+    }
+
+    // Function to change playback speed
+    function changeSpeed(audioId, speed) {
+      var audio = document.getElementById(audioId);
+      audio.playbackRate = parseFloat(speed);
+    }
+
+    // Function to update progress bar and time
+    function updateProgress(audioId, progressBarId, timeId) {
+      var audio = document.getElementById(audioId);
+      var progressBar = document.getElementById(progressBarId);
+      var timeDisplay = document.getElementById(timeId);
+      if (audio.duration) {
+        progressBar.value = (audio.currentTime / audio.duration) * 100;
+        timeDisplay.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+      }
+    }
+
+    // Function to format time in mm:ss
+    function formatTime(seconds) {
+      var minutes = Math.floor(seconds / 60);
+      var seconds = Math.floor(seconds % 60);
+      if (seconds < 10) {
+        seconds = '0' + seconds;
+      }
+      return minutes + ':' + seconds;
+    }
+
+    // Function to seek in the audio
+    function seek(audioId, value) {
+      var audio = document.getElementById(audioId);
+      audio.currentTime = (value / 100) * audio.duration;
+    }
+
+    // Initialize audio players
+    document.addEventListener('DOMContentLoaded', function() {
+      var audioElements = document.querySelectorAll('audio');
+      audioElements.forEach(function(audio) {
+        var audioId = audio.id;
+        var audioContainer = document.getElementById(audioId + '_container');
+
+        // Check if the audio file exists
+        audio.addEventListener('loadedmetadata', function() {
+          // Show the audio player
+          audioContainer.style.display = 'block';
+          updateProgress(audioId, 'progressBar_' + audioId, 'time_' + audioId);
+        });
+
+        audio.addEventListener('error', function() {
+          // Hide the audio player if the file doesn't exist
+          audioContainer.style.display = 'none';
+          console.error('Error loading audio file:', audio.src);
+        });
+
+        // Other event listeners
+        audio.addEventListener('timeupdate', function() {
+          updateProgress(audioId, 'progressBar_' + audioId, 'time_' + audioId);
+        });
+
+        audio.addEventListener('ended', function() {
+          document.getElementById('playPauseBtn_' + audioId).textContent = 'Play';
+        });
+
+        // Attempt to load the audio file
+        audio.load();
+      });
+    });
+  </script>
+</body>
+</html>
+  
